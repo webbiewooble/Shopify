@@ -1,0 +1,6 @@
+{
+  "name": "Skincare Brand E-commerce",
+  "description": "A responsive, modern e-commerce landing page clone featuring products, carousels, and clean design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
