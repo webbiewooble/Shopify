@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deconstruct - Skincare</title>
+  <title>Evoracare - Skincare</title>
   
   <link rel="stylesheet" href="./style.css">
   
@@ -26,23 +26,27 @@
   <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
+        
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center md:hidden pr-2">
+          <button id="mobile-menu-btn" class="text-gray-600 hover:text-black p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+
         <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center pr-10">
-          <h1 class="text-2xl font-serif tracking-tighter leading-none font-bold">
-            de<br />cons<br />truct&deg;
+        <div class="flex-shrink-0 flex items-center md:pr-10">
+          <h1 class="text-xl md:text-2xl font-serif tracking-tighter leading-none font-bold">
+            Evoracare
           </h1>
         </div>
 
         <!-- Nav Links -->
         <div class="hidden md:flex flex-1 items-center justify-center space-x-6 lg:space-x-8">
-          <a href="#" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Shop</a>
-          <a href="#" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Offers</a>
-          <a href="#" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Blogs</a>
-          <a href="#" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Refer & Earn</a>
-          <a href="#" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Our Philosophy</a>
-          <a href="#" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Track Your Order</a>
-          <a href="#" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Play & Win</a>
-          <a href="#" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Dermat Consultation</a>
+          <a href="/" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Home</a>
+          <a href="/shop.html" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Shop</a>
+          <a href="/blogs.html" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Blogs</a>
+          <a href="/philosophy.html" class="text-gray-900 hover:text-black font-medium text-xs tracking-widest uppercase">Our Philosophy</a>
         </div>
 
         <!-- Icons -->
@@ -50,12 +54,10 @@
           <button class="text-gray-600 hover:text-black p-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           </button>
-          <button class="text-gray-600 hover:text-black p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </button>
-          <button class="text-gray-600 hover:text-black p-1 relative">
+          <a href="/cart.html" class="text-gray-600 hover:text-black p-1 relative">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-          </button>
+            <span class="absolute top-0 right-0 bg-red-500 text-white text-[8px] font-bold w-3 h-3 rounded-full flex items-center justify-center">2</span>
+          </a>
         </div>
       </div>
     </div>
@@ -103,7 +105,7 @@
       <div class="w-12 h-[1px] bg-black"></div>
     </div>
     
-    <div id="bestsellers-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+    <div id="bestsellers-container" class="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 lg:gap-8">
       <!-- Injected by script.js -->
     </div>
     
@@ -121,7 +123,7 @@
       <div class="w-12 h-[1px] bg-black"></div>
     </div>
     
-    <div id="new-arrivals-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+    <div id="new-arrivals-container" class="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 lg:gap-8">
       <!-- Injected by script.js -->
     </div>
   </section>
@@ -134,18 +136,27 @@
         <div class="w-12 h-[1px] bg-black"></div>
       </div>
       
-      <div class="hidden md:flex items-center justify-between mt-8">
-         <button class="p-4 hover:bg-gray-50 transition-colors">
+      <div class="flex items-center justify-between mt-8">
+         <button class="p-2 md:p-4 hover:bg-gray-50 transition-colors hidden sm:block">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-gray-800"><path d="m15 18-6-6 6-6"/></svg>
          </button>
          
-         <div class="flex-1 flex gap-4 overflow-hidden px-8 justify-center items-center">
-           <div class="w-full h-[100px] border border-dashed border-gray-200 flex items-center justify-center text-gray-400 font-light text-sm">
-              Concern Categories Slider Placeholder
+         <div class="flex-1 flex gap-4 overflow-x-auto snap-x px-4 md:px-8 justify-start md:justify-center items-center pb-4 scrollbar-hide">
+           <div class="min-w-[120px] md:min-w-0 w-full h-[80px] md:h-[100px] border border-dashed border-gray-200 flex items-center justify-center text-gray-400 font-light text-xs md:text-sm snap-center">
+              Categories
+           </div>
+           <div class="min-w-[120px] md:min-w-0 w-full h-[80px] md:h-[100px] border border-dashed border-gray-200 flex items-center justify-center text-gray-400 font-light text-xs md:text-sm snap-center">
+              Categories
+           </div>
+           <div class="min-w-[120px] md:min-w-0 w-full h-[80px] md:h-[100px] border border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 font-light text-xs md:text-sm snap-center">
+              Categories
+           </div>
+           <div class="min-w-[120px] md:min-w-0 w-full h-[80px] md:h-[100px] border border-dashed border-gray-200 flex items-center justify-center text-gray-400 font-light text-xs md:text-sm snap-center">
+              Categories
            </div>
          </div>
 
-         <button class="p-4 hover:bg-gray-50 transition-colors">
+         <button class="p-2 md:p-4 hover:bg-gray-50 transition-colors hidden sm:block">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-gray-800"><path d="m9 18 6-6-6-6"/></svg>
          </button>
       </div>
@@ -159,7 +170,7 @@
       <div class="w-12 h-[1px] bg-black"></div>
     </div>
     
-    <div id="routines-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+    <div id="routines-container" class="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 lg:gap-8">
       <!-- Injected by script.js -->
     </div>
   </section>
@@ -173,7 +184,7 @@
       </div>
       
       <p class="text-gray-800 text-lg md:text-xl font-light mb-10 leading-relaxed font-serif">
-        Deconstruct offers Beginner-friendly, Highly Effective Yet Gentle products for those who<br class="hidden md:block"/> are starting their science-backed skincare journey.
+        Evoracare offers Beginner-friendly, Highly Effective Yet Gentle products for those who<br class="hidden md:block"/> are starting their science-backed skincare journey.
       </p>
       
       <button class="border border-black text-black px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-colors mb-20">
@@ -222,7 +233,7 @@
         <div class="w-12 h-[1px] bg-black"></div>
       </div>
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-8">
         <div class="bg-[#0a0a0a] text-white aspect-[3/4] flex flex-col justify-end p-8 hover:bg-black transition-colors cursor-pointer relative overflow-hidden group">
            <div class="absolute top-8 left-8 w-8 h-[1px] bg-white opacity-50 group-hover:opacity-100 transition-opacity"></div>
            <h3 class="text-sm font-semibold tracking-wide leading-relaxed mb-8 uppercase">GEL SUNSCREEN: THE BEST SPF SUNSCREEN FOR OILY AND ACNE-PRONE SKIN</h3>
@@ -254,64 +265,51 @@
   </section>
 
   <!-- Perks -->
-  <div class="bg-[#f0f0f0] border-t border-b border-gray-200 mt-16">
+  <div class="bg-[#f0f0f0] border-t border-b border-gray-200 mt-12 md:mt-16">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex flex-col md:flex-row py-8 divide-y md:divide-y-0 md:divide-x divide-gray-300">
-        <div class="flex-1 text-center font-sans px-4 py-4 md:py-0">
-          <h4 class="text-lg font-bold text-black mb-1">Free Shipping</h4>
-          <p class="text-sm text-gray-600 font-light">On all orders above ₹499</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-0 py-8 md:divide-x divide-gray-300">
+        <div class="text-center font-sans px-4">
+          <h4 class="text-base md:text-lg font-bold text-black mb-1">Free Shipping</h4>
+          <p class="text-xs md:text-sm text-gray-600 font-light">On all orders above ₹499</p>
         </div>
-        <div class="flex-1 text-center font-sans px-4 py-4 md:py-0">
-          <h4 class="text-lg font-bold text-black mb-1">Exclusive Offers</h4>
-          <p class="text-sm text-gray-600 font-light">Lowest Prices on website</p>
+        <div class="text-center font-sans px-4">
+          <h4 class="text-base md:text-lg font-bold text-black mb-1">Exclusive Offers</h4>
+          <p class="text-xs md:text-sm text-gray-600 font-light">Lowest Prices on website</p>
         </div>
-        <div class="flex-1 text-center font-sans px-4 py-4 md:py-0">
-          <h4 class="text-lg font-bold text-black mb-1">Loved By 5M+ Customers</h4>
-          <p class="text-sm text-gray-600 font-light">Rated 4.8/5 by thousands</p>
+        <div class="text-center font-sans px-4">
+          <h4 class="text-base md:text-lg font-bold text-black mb-1">Loved By 5M+ Customers</h4>
+          <p class="text-xs md:text-sm text-gray-600 font-light">Rated 4.8/5 by thousands</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <div class="bg-[#f5f5f5] py-16 text-center border-b border-gray-200">
-    <h4 class="text-sm font-semibold tracking-widest uppercase mb-6 text-gray-800">
+  <div class="bg-[#f5f5f5] py-10 md:py-16 px-4 text-center border-b border-gray-200">
+    <h4 class="text-xs md:text-sm font-semibold tracking-widest uppercase mb-4 md:mb-6 text-gray-800 leading-relaxed max-w-sm mx-auto md:max-w-none">
       LEARN MORE ABOUT YOUR SKIN BY FOLLOWING US ON INSTAGRAM
     </h4>
-    <button class="border border-black bg-white text-black px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-colors">
+    <button class="border border-black bg-white text-black px-6 md:px-8 py-3 text-[10px] md:text-xs font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-colors">
       Follow Now
     </button>
   </div>
 
-  <div class="bg-white py-12 px-4 text-center border-b border-gray-200">
-    <div class="max-w-4xl mx-auto space-y-4 text-xs tracking-wide">
-       <h4 class="font-bold text-black uppercase mb-4">CAUTION NOTICE</h4>
-       <p class="font-light text-gray-800 leading-relaxed font-semibold">
-          Deconstruct is committed to your security and satisfaction. We never ask for your OTP, password, or personal details via phone or unsolicited communication.
-       </p>
-       <p class="font-bold text-black leading-relaxed">
-          If you receive such a request, do not share any information. We also do not require payments for contests, lucky draws, or promotions outside our official platform.
-       </p>
-       <p class="font-light text-gray-800 leading-relaxed text-[10px]">
-          For accurate information, refer to our official website or verified social media. This message is for your safety and public interest.
-       </p>
-    </div>
-  </div>
-
-  <footer class="bg-[#1a1a1a] text-white pt-16 pb-8 px-4 font-sans text-sm font-light">
+  <footer class="bg-[#1a1a1a] text-white pt-12 md:pt-16 pb-8 px-6 md:px-4 font-sans text-sm font-light">
     <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 border-b border-gray-800 pb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 border-b border-gray-800 pb-12 md:pb-16 text-left">
         
-        <div class="order-4 lg:order-1 flex items-end">
-          <p class="text-gray-300 leading-relaxed pr-8">
-            Deconstruct offers a wide range of Beginner-friendly highly effective yet gentle skincare products.
+        <div class="flex flex-col items-start text-left">
+           <h4 class="font-serif tracking-tighter leading-none font-bold text-2xl text-white mb-4">
+            Evoracare
+          </h4>
+          <p class="text-gray-400 leading-relaxed max-w-[280px] md:pr-8 text-xs md:text-sm">
+            Evoracare offers a wide range of Beginner-friendly highly effective yet gentle skincare products backed by science.
           </p>
         </div>
 
-        <div class="order-1 lg:order-2">
-          <h4 class="text-center font-semibold tracking-[0.2em] mb-4 text-white">ABOUT</h4>
-          <div class="w-4 h-[1px] bg-white mx-auto mb-6"></div>
-          <ul class="space-y-4 text-center text-gray-400">
+        <div>
+          <h4 class="font-semibold tracking-[0.2em] mb-6 text-white text-xs">ABOUT</h4>
+          <ul class="space-y-3 md:space-y-4 text-gray-400 text-xs md:text-sm">
             <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
             <li><a href="#" class="hover:text-white transition-colors">Our Philosophy</a></li>
             <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
@@ -322,92 +320,57 @@
           </ul>
         </div>
 
-        <div class="order-2 lg:order-3 grid grid-cols-2 gap-4">
-          <div>
-            <h4 class="text-center font-semibold tracking-[0.2em] mb-4 text-white text-xs whitespace-nowrap">ALSO AVAILABLE ON</h4>
-            <div class="w-4 h-[1px] bg-white mx-auto mb-6"></div>
-            <ul class="space-y-4 text-center text-gray-400 text-xs">
-              <li><a href="#" class="hover:text-white transition-colors">Amazon</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Flipkart</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Nykaa</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Myntra</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Purplle</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Blinkit</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Zepto</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Instamart</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-center font-semibold tracking-[0.2em] mb-4 text-white text-xs whitespace-nowrap">QUICK LINKS</h4>
-            <div class="w-4 h-[1px] bg-white mx-auto mb-6"></div>
-            <ul class="space-y-4 text-center text-gray-400 text-xs">
-              <li><a href="#" class="hover:text-white transition-colors">My Account</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Grievance Officer</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Track Your Order</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Our Ingredients</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Blogs</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="order-3 lg:order-4 text-center">
-          <h4 class="font-semibold tracking-[0.2em] mb-4 text-white">GET IN TOUCH</h4>
-          <div class="w-4 h-[1px] bg-white mx-auto mb-6"></div>
+        <div>
+          <h4 class="font-semibold tracking-[0.2em] mb-6 text-white text-xs">GET IN TOUCH</h4>
           
-          <div class="flex justify-center space-x-6 mb-8 text-gray-400">
-            <a href="#" class="hover:text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <div class="flex space-x-5 mb-8 text-gray-400">
+            <a href="#" class="hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="#" class="hover:text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            <a href="#" class="hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
-            <a href="#" class="hover:text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <a href="#" class="hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="#" class="hover:text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            <a href="#" class="hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
             </a>
           </div>
 
-          <h5 class="font-semibold tracking-widest text-[10px] mb-3">ADDRESS</h5>
-          <div class="flex text-gray-400 text-xs justify-center text-center px-4 mb-6 leading-relaxed">
-             <p>581, 2nd Floor, 1st Main, 6th Sector, HSR Layout, Bengaluru, Karnataka - 560102</p>
-          </div>
+          <div class="space-y-6">
+            <div>
+              <h5 class="font-semibold tracking-widest text-[10px] mb-2 text-white">ADDRESS</h5>
+              <p class="text-gray-400 text-xs leading-relaxed max-w-[260px]">
+                581, 2nd Floor, 1st Main, 6th Sector, HSR Layout, Bengaluru, Karnataka - 560102
+              </p>
+            </div>
 
-          <h5 class="font-semibold tracking-widest text-[10px] mb-3">EMAIL</h5>
-          <div class="flex items-center justify-center text-gray-400 text-sm mb-6">
-             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-             <a href="mailto:wecare@thedeconstruct.in" class="hover:text-white transition-colors text-xs">wecare@thedeconstruct.in</a>
-          </div>
+            <div>
+              <h5 class="font-semibold tracking-widest text-[10px] mb-2 text-white">EMAIL</h5>
+              <div class="flex items-center text-gray-400 text-xs">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <a href="mailto:wecare@evoracare.com" class="hover:text-white transition-colors">wecare@evoracare.com</a>
+              </div>
+            </div>
 
-          <h5 class="font-semibold tracking-widest text-[10px] mb-3">PHONE</h5>
-          <div class="flex flex-col items-center justify-center text-gray-400 text-sm">
-             <div class="flex items-center mb-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span class="text-xs tracking-wider">080-471-05772</span>
-             </div>
-             <span class="text-[10px]">(Monday - Sunday 10am - 7pm)</span>
+            <div>
+              <h5 class="font-semibold tracking-widest text-[10px] mb-2 text-white">PHONE</h5>
+              <div class="flex flex-col text-gray-400 text-xs">
+                <div class="flex items-center mb-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span class="tracking-widest">080-471-05772</span>
+                </div>
+                <span class="text-[10px] text-gray-500">(Monday - Sunday 10am - 7pm)</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="py-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500">
-         <div class="flex items-center space-x-2 mb-4 md:mb-0">
-           <span class="text-gray-400 font-medium tracking-widest">PAYMENT OPTIONS</span>
-           <div class="flex space-x-2 ml-4">
-             <div class="w-10 h-6 bg-white rounded-sm opacity-80"></div>
-             <div class="w-10 h-6 bg-white rounded-sm opacity-80"></div>
-             <div class="w-10 h-6 bg-white rounded-sm opacity-80"></div>
-             <div class="w-10 h-6 bg-white rounded-sm opacity-80"></div>
-             <div class="w-10 h-6 bg-white rounded-sm opacity-80"></div>
-           </div>
-           <span class="ml-2 font-mono text-[10px]">AND MANY MORE...</span>
-         </div>
-      </div>
-      
-      <div class="pt-4 border-t border-gray-800 flex flex-col md:flex-row justify-between text-[11px] text-gray-500 text-center md:text-left">
-         <p>&copy; The Deconstruct 2025. All rights Reserved.</p>
-         <p class="mt-2 md:mt-0 uppercase tracking-wider">GST NO: 29AAICB9825H1Z8</p>
+      <div class="pt-6 flex flex-col md:flex-row justify-between items-center md:items-start text-[10px] md:text-[11px] text-gray-500 text-center md:text-left gap-2 md:gap-0">
+         <p>&copy; Evoracare 2025. All rights Reserved.</p>
+         <p class="uppercase tracking-wider">GST NO: 29AAICB9825H1Z8</p>
       </div>
     </div>
   </footer>
@@ -420,12 +383,24 @@
     </button>
   </div>
   
-  <div class="fixed bottom-6 right-6 z-50">
-    <button class="w-[60px] h-[60px] bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg">
-      <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-    </button>
+
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] hidden flex-col transition-all duration-300">
+    <div class="flex justify-between items-center h-20 px-6 border-b border-gray-100">
+      <h1 class="text-2xl font-serif tracking-tighter leading-none font-bold">
+        Evoracare
+      </h1>
+      <button id="close-menu-btn" class="text-gray-900 hover:text-black p-2 bg-gray-50 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="flex flex-col py-6 px-8 space-y-6 overflow-y-auto w-full h-full pb-20">
+      <a href="/" class="text-gray-900 font-bold text-sm tracking-widest uppercase border-b border-gray-100 pb-4 w-full">Home</a>
+      <a href="/shop.html" class="text-gray-900 font-bold text-sm tracking-widest uppercase border-b border-gray-100 pb-4 w-full">Shop</a>
+      <a href="/blogs.html" class="text-gray-900 font-bold text-sm tracking-widest uppercase border-b border-gray-100 pb-4 w-full">Blogs</a>
+      <a href="/philosophy.html" class="text-gray-900 font-bold text-sm tracking-widest uppercase pb-4 w-full">Our Philosophy</a>
+    </div>
   </div>
 
   <script src="./script.js"></script>

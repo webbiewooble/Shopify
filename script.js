@@ -147,23 +147,23 @@ const Routines = [
 
 function createProductCard(product) {
   const optionsHtml = product.options ? `
-    <div class="flex items-center justify-center gap-2 mb-3">
-      ${product.options.map(opt => `<span class="border border-gray-300 text-[10px] px-2 py-1 text-gray-600">${opt}</span>`).join('')}
+    <div class="flex items-center justify-center gap-1 md:gap-2 mb-2 md:mb-3 flex-wrap">
+      ${product.options.map(opt => `<span class="border border-gray-300 text-[9px] md:text-[10px] px-1.5 md:px-2 py-0.5 md:py-1 text-gray-600">${opt}</span>`).join('')}
     </div>
   ` : '';
 
   const originalPriceHtml = product.originalPrice !== product.discountedPrice ? 
-    `<span class="text-gray-400 line-through text-sm font-light">₹${product.originalPrice}</span>` : '';
+    `<span class="text-gray-400 line-through text-xs md:text-sm font-light">₹${product.originalPrice}</span>` : '';
 
   const discountHtml = product.discountPercentage ? 
-    `<span class="bg-[#b3261e] text-white text-[10px] px-1.5 py-0.5 rounded-sm">${product.discountPercentage}</span>` : '';
+    `<span class="bg-[#b3261e] text-white text-[9px] md:text-[10px] px-1 md:px-1.5 py-0.5 rounded-sm">${product.discountPercentage}</span>` : '';
   
   const tagHtml = product.discountPercentage || (product.tags && product.tags[0]) ? 
-    `<div class="absolute top-0 right-0 bg-[#111] text-white text-[10px] font-bold px-3 py-1 tracking-wider z-10">${product.tags?.[0] || product.discountPercentage}</div>` : '';
+    `<div class="absolute top-0 right-0 bg-[#111] text-white text-[8px] md:text-[10px] font-bold px-2 md:px-3 py-1 tracking-wider z-10">${product.tags?.[0] || product.discountPercentage}</div>` : '';
 
   return `
     <div class="flex flex-col group h-full">
-      <div class="relative bg-[#f8f8f8] aspect-[4/5] overflow-hidden flex items-center justify-center p-6 mb-4">
+      <div class="relative bg-[#f8f8f8] aspect-[4/5] overflow-hidden flex items-center justify-center p-3 md:p-6 mb-2 md:mb-4">
         ${tagHtml}
         <img 
           src="${product.image}" 
@@ -172,29 +172,29 @@ function createProductCard(product) {
         />
       </div>
       
-      <div class="flex flex-col flex-1 text-center px-2">
-        <h3 class="text-sm font-medium text-gray-900 leading-tight mb-2 line-clamp-2 min-h-[40px]">
+      <div class="flex flex-col flex-1 text-center px-1 md:px-2">
+        <h3 class="text-[11px] md:text-sm font-medium text-gray-900 leading-tight mb-1 md:mb-2 line-clamp-2 min-h-[32px] md:min-h-[40px]">
           ${product.name}
         </h3>
         
-        <div class="flex items-center justify-center gap-2 mb-2">
+        <div class="flex items-center justify-center gap-1 md:gap-2 mb-1 md:mb-2 flex-wrap">
           ${originalPriceHtml}
-          <span class="text-black font-semibold text-sm">₹${product.discountedPrice}</span>
+          <span class="text-black font-semibold text-[13px] md:text-sm">₹${product.discountedPrice}</span>
           ${discountHtml}
         </div>
         
-        <div class="flex items-center justify-center gap-1 mb-3">
-          <div class="flex text-[#f59e0b] text-xs">
+        <div class="flex items-center justify-center gap-1 mb-2 md:mb-3 flex-wrap">
+          <div class="flex text-[#f59e0b] text-[10px] md:text-xs">
             ${'★'.repeat(Math.floor(product.rating))}${'☆'.repeat(5 - Math.floor(product.rating))}
           </div>
-          <span class="text-[11px] text-gray-500 font-medium">${product.rating} (${product.reviews} Reviews)</span>
+          <span class="text-[9px] md:text-[11px] text-gray-500 font-medium">${product.rating} (${product.reviews})</span>
         </div>
         
         ${optionsHtml}
         
-        <p class="text-xs text-gray-500 mt-auto mb-4 min-h-[16px]">${product.description || ''}</p>
+        <p class="text-[10px] md:text-xs text-gray-500 mt-auto mb-2 md:mb-4 line-clamp-1 md:line-clamp-none min-h-[14px] md:min-h-[16px]">${product.description || ''}</p>
         
-        <button class="w-full bg-[#111] text-white py-3 text-xs font-bold tracking-widest uppercase hover:bg-black transition-colors mt-auto">
+        <button class="w-full bg-[#111] text-white py-2 md:py-3 text-[10px] md:text-xs font-bold tracking-widest uppercase hover:bg-black transition-colors mt-auto">
           Add To Cart
         </button>
       </div>
@@ -216,5 +216,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const routinesContainer = document.getElementById('routines-container');
   if (routinesContainer) {
     routinesContainer.innerHTML = Routines.map(createProductCard).join('');
+  }
+
+  const allProductsContainer = document.getElementById('all-products-container');
+  if (allProductsContainer) {
+    const allProducts = [...Bestsellers, ...NewArrivals, ...Routines];
+    allProductsContainer.innerHTML = allProducts.map(createProductCard).join('');
+  }
+
+  // Mobile Menu JS
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const closeMenuBtn = document.getElementById('close-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('flex');
+    });
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('flex');
+    });
   }
 });
